@@ -45,12 +45,10 @@ function renderQuestions() {
   questions.forEach((item, index) => {
     let div = document.createElement("div");
 
-    div.innerHTML = `
-      <h3>${item.question}</h3>
+    div.innerHTML = `<h3>${item.question}</h3>
       ${item.choices
         .map(
-          (option) => `
-          
+          (option) => ` 
           <label>
             <input 
               type="radio"
