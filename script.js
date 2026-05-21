@@ -44,26 +44,18 @@ function renderQuestions() {
 
   questions.forEach((item, index) => {
     let div = document.createElement("div");
-
-    div.innerHTML = `<h3>${item.question}</h3>
-      ${item.choices
-        .map(
-          (option) => ` 
-          <label>
-            <input 
-              type="radio"
-              name="question-${index}"
-              value="${option}"
-              ${
-                savedAnswers[index] === option ? "checked" : ""
-              }
-            >
-            ${option}
-          </label>
-          <br>
-      `
-        )
-        .join("")}`;
+div.innerHTML = `<h3>${item.question}</h3>
+${item.choices.map((option)=>`
+<label>
+<input 
+type="radio"
+name="question-${index}"
+value="${option}"
+${savedAnswers[index] === option ? 'checked="true"' : ""}
+>
+${option}
+</label>
+`).join("")}`
 
     container.appendChild(div);
   });
