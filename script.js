@@ -47,7 +47,6 @@ function renderQuestions() {
 
     div.innerHTML = `
       <h3>${item.question}</h3>
-
       ${item.choices
         .map(
           (option) => `
@@ -66,8 +65,7 @@ function renderQuestions() {
           <br>
       `
         )
-        .join("")}
-    `;
+        .join("")}`;
 
     container.appendChild(div);
   });
